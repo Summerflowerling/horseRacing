@@ -16,4 +16,9 @@
 
 .horse {
   background-color: rgb(243, 239, 239);
+  align-items: center;
+}
+
+.nameWidth {
+  width: 5em;
 }

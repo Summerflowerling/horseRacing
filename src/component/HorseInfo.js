@@ -13,25 +13,25 @@ function HorseInfo() {
       </div>
 
       <div className='flex horse'>
-        <p>Sprite</p>
+        <p className='nameWidth'>Sprite</p>
         <p>{bettingOdds}</p>
         <Betting />
       </div>
 
       <div className='flex horse'>
-        <p>Thena</p>
+        <p className='nameWidth'>Thena</p>
         <p>{bettingOdds}</p>
         <Betting />
       </div>
 
       <div className='flex horse'>
-        <p>Midnight</p>
+        <p className='nameWidth'>Midnight</p>
         <p>{bettingOdds}</p>
         <Betting />
       </div>
 
       <div className='flex horse'>
-        <p>Misty</p>
+        <p className='nameWidth'>Misty</p>
         <p>{bettingOdds}</p>
         <Betting />
       </div>
