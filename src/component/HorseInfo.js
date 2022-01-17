@@ -1,0 +1,36 @@
+import React from 'react';
+import { useState } from 'react';
+
+function HorseInfo() {
+  const [bettingOdds, setBettingOdds] = useState(2);
+  return (
+    <div>
+      <div className='flex horseInfo'>
+        <h5>Horse Name</h5>
+        <h5>Betting Odds</h5>
+      </div>
+
+      <div className='flex horse'>
+        <p>Sprite</p>
+        <p>{bettingOdds}</p>
+      </div>
+
+      <div className='flex horse'>
+        <p>Thena</p>
+        <p>{bettingOdds}</p>
+      </div>
+
+      <div className='flex horse'>
+        <p>Midnight</p>
+        <p>{bettingOdds}</p>
+      </div>
+
+      <div className='flex horse'>
+        <p>Misty</p>
+        <p>{bettingOdds}</p>
+      </div>
+    </div>
+  );
+}
+
+export default HorseInfo;
