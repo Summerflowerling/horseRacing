@@ -22,10 +22,8 @@ function AmountCalculate() {
           <p className='amountCal-content-title'>Credit Left:</p>
           <div className='amountCal-content-totalBetting'>
             <p>NTD 2000</p>
+            <button>Confirm</button>
           </div>
-        </div>
-        <div className='amountCal-content'>
-          <button>Submit</button>
         </div>
       </div>
     </div>
