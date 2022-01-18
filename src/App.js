@@ -2,6 +2,7 @@ import './App.css';
 import { UserInfo } from './component/UserInfo';
 import History from './component/History';
 import HorseInfo from './component/HorseInfo';
+import AmountCalculate from './component/AmountCalculate';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <UserInfo />
       <History />
       <HorseInfo />
+      <AmountCalculate />
     </div>
   );
 }

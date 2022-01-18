@@ -43,3 +43,57 @@
   border-radius: 50%;
   border-color: lightslategray;
 }
+
+/*Betting Summery section starts*/
+
+.amountCal {
+  width: 80vw;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 1em;
+  background-color: rgb(233, 232, 238);
+}
+
+.amountCal-content-title {
+  text-align: center;
+  width: 20vw;
+}
+
+.amountCal-summery {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid whitesmoke;
+  font-weight: bold;
+}
+
+.amountCal-container {
+  width: 50vw;
+}
+
+.amountCal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.amountCal-content-border {
+  border-bottom: 2px solid whitesmoke;
+}
+
+.amountCal-content-totalBetting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.amountCal-content-totalBetting-moneydisplay {
+  margin: 0.5em 0;
+}
+
+/*Betting summery section ends*/
