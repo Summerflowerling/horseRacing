@@ -4,6 +4,10 @@ export const MakeBet = () => {
   const [horseBetting, setHorseBetting] = useState(0);
 
   const increase = () => {
+    if (horseBetting > 9) {
+      alert('No more than USD10 for each bet');
+      return;
+    }
     setHorseBetting((preValue) => preValue + 1);
   };
 
