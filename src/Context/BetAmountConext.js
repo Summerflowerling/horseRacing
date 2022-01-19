@@ -7,9 +7,10 @@ export function useBetAmount() {
 }
 
 const BetAmountConextProvider = ({ children }) => {
-  const [test, setTest] = useState(100);
+  const [totalAmount, setTotalAmount] = useState(0);
+
   return (
-    <BetAmountContext.Provider value={test}>
+    <BetAmountContext.Provider value={{ totalAmount, setTotalAmount }}>
       {children}
     </BetAmountContext.Provider>
   );
