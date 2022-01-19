@@ -1,17 +1,18 @@
 import './App.css';
-import { UserInfo } from './component/UserInfo';
-import History from './component/History';
-import HorseInfo from './component/HorseInfo';
-import AmountCalculate from './component/AmountCalculate';
+import { UserInfo } from './Component/UserInfo';
+import History from './Component/History';
+import HorseInfo from './Component/HorseInfo';
+import AmountCalculate from './Component/AmountCalculate';
+import BetAmountConextProvider from './Context/BetAmountConext';
 
 function App() {
   return (
-    <div className='App'>
+    <BetAmountConextProvider>
       <UserInfo />
       <History />
       <HorseInfo />
       <AmountCalculate />
-    </div>
+    </BetAmountConextProvider>
   );
 }
 

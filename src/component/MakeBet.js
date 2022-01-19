@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useBetAmount } from '../Context/BetAmountConext';
 
 export const MakeBet = () => {
   const [horseBetting, setHorseBetting] = useState(0);
+  const testValue = useBetAmount();
 
   const increase = () => {
     if (horseBetting > 9) {
