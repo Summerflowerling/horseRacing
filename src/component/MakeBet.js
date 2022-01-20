@@ -1,31 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useBetAmount } from '../Context/BetAmountConext';
 
 export const MakeBet = () => {
   const [horseBetting, setHorseBetting] = useState(0);
   const totalBet = useBetAmount();
-  const [click, setClick] = useState(false);
 
   const increase = () => {
     if (horseBetting > 9) {
       alert('No more than USD10 for each bet');
       return;
     }
-    setClick(true);
-    if (!click) {
-      alert('Not ready yet');
-      return;
-    }
-    setHorseBetting((preValue) => preValue + 1);
-
-    totalBet.setTotalAmount((pre) => pre + 1);
-    console.log(totalBet);
-    // TODO: value not cating up when pressing button
+    //To make sure the value is updated as soon as the button is clicked.
+    const newIncrease = horseBetting + 1;
+    setHorseBetting(newIncrease);
+    //use useRef to keep persistent between each render
+    totalBet.current = totalBet.current + 1;
   };
 
   const decrease = () => {
     if (horseBetting < 1) return;
-    setHorseBetting((preValue) => preValue - 1);
+    const newDecrease = horseBetting - 1;
+    setHorseBetting(newDecrease);
+    totalBet.current = totalBet.current - 1;
   };
 
   return (

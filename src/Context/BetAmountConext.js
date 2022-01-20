@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 
 const BetAmountContext = React.createContext();
 
@@ -7,10 +7,10 @@ export function useBetAmount() {
 }
 
 const BetAmountConextProvider = ({ children }) => {
-  const [totalAmount, setTotalAmount] = useState(0);
+  const totalAmount = useRef(0);
 
   return (
-    <BetAmountContext.Provider value={{ totalAmount, setTotalAmount }}>
+    <BetAmountContext.Provider value={totalAmount}>
       {children}
     </BetAmountContext.Provider>
   );
