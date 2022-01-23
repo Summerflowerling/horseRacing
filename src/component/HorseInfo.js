@@ -42,6 +42,7 @@ function HorseInfo() {
         <p>{bettingOdds[0].bettingOdds}</p>
         <MakeBet />
       </div>
+
     </div>
   );
 }

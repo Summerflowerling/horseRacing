@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef } from 'react';
+import React, { useContext, useReducer } from 'react';
 
 const BetAmountContext = React.createContext();
 
@@ -6,11 +6,22 @@ export function useBetAmount() {
   return useContext(BetAmountContext);
 }
 
+function reducer(countState, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: countState.count + 1 };
+    case 'decrement':
+      return { count: countState.count - 1 };
+    default:
+      return countState;
+  }
+}
+
 const BetAmountConextProvider = ({ children }) => {
-  const totalAmount = useRef(0);
+  const [countState, dispatch] = useReducer(reducer, { count: 0 });
 
   return (
-    <BetAmountContext.Provider value={totalAmount}>
+    <BetAmountContext.Provider value={{ countState, dispatch }}>
       {children}
     </BetAmountContext.Provider>
   );

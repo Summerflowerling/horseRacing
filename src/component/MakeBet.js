@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useBetAmount } from '../Context/BetAmountConext';
 
 export const MakeBet = () => {
@@ -13,15 +13,17 @@ export const MakeBet = () => {
     //To make sure the value is updated as soon as the button is clicked.
     const newIncrease = horseBetting + 1;
     setHorseBetting(newIncrease);
+    totalBet.dispatch({ type: 'increment' });
     //use useRef to keep persistent between each render
-    totalBet.current = totalBet.current + 1;
+    console.log('This is increment', totalBet.countState.count);
   };
 
   const decrease = () => {
     if (horseBetting < 1) return;
     const newDecrease = horseBetting - 1;
     setHorseBetting(newDecrease);
-    totalBet.current = totalBet.current - 1;
+    totalBet.dispatch({ type: 'decrement' });
+    console.log('This is increment', totalBet.countState.count);
   };
 
   return (

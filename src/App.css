@@ -26,6 +26,39 @@
   text-align: center;
 }
 
+.amountCal-confirm-btn,
+.history-btn {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 1px solid rgb(243, 239, 239);
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.amountCal-confirm-btn {
+  background-color: rgb(218, 218, 226);
+  border-color: whitesmoke;
+}
+
+.amountCal-confirm-btn:hover,
+.history-btn:hover {
+  color: #000000;
+  background-color: rgb(231, 225, 225);
+}
+
+.amountCal-confirm-btn:active,
+.history-btn:active {
+  box-shadow: 0 5px rgb(204, 204, 204);
+  transform: translateY(2px);
+}
+
 .nameWidth {
   width: 5em;
 }
