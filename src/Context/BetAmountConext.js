@@ -28,3 +28,5 @@ const BetAmountConextProvider = ({ children }) => {
 };
 
 export default BetAmountConextProvider;
+
+//TODO: Add the exchange rate converter
