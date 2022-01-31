@@ -1,4 +1,5 @@
 import './App.css';
+import './horse.css';
 import { UserInfo } from './Component/UserInfo';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import History from './Component/History';
@@ -25,7 +26,6 @@ function App() {
                 </div>
               )}
             />
-
             <Route path='/race' component={RaceGameDisplay} />
           </Switch>
         </Router>

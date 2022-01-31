@@ -2,9 +2,15 @@ import React from 'react';
 
 const RaceGameDisplay = () => {
   return (
-    <div>
-      <h1>Test</h1>
-    </div>
+    <>
+      <div className='horse-flex'>
+        <div className='horseUni horse1'>Sprite</div>
+        <div className='horseUni horse2'>Thena</div>
+        <div className='horseUni horse3'>Midnight</div>
+        <div className='horseUni horse4'>Misty</div>
+      </div>
+      <div className='finishLine'>Finish Line</div>
+    </>
   );
 };
 
