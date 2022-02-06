@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useBetAmount } from '../Context/BetAmountConext';
 
 function AmountCalculate() {
@@ -26,7 +27,9 @@ function AmountCalculate() {
           <p className='amountCal-content-title'>Credit Left:</p>
           <div className='amountCal-content-totalBetting'>
             <p>NTD 2000</p>
-            <button className='amountCal-confirm-btn'>Confirm</button>
+            <Link to='/race'>
+              <button className='amountCal-confirm-btn'>Confirm</button>
+            </Link>
           </div>
         </div>
       </div>
