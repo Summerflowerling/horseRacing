@@ -1,5 +1,5 @@
 const port = 8089;
-const baseUrl = 'https://api.exchangeratesapi.io/v1/latest?access_key=';
+const baseUrl = 'http://api.exchangeratesapi.io/v1/latest?access_key=';
 
 const express = require('express');
 const cors = require('cors');
