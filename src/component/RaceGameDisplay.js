@@ -1,13 +1,32 @@
-import React, { useLayoutEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const RaceGameDisplay = () => {
   const [start, setStart] = useState(false);
-  const [randomTime, setRandomTime] = useState(0);
+  const [randomTime, setRandomTime] = useState([]);
   const defaultTime = useRef(1.5);
   const [animateY, setAnimateY] = useState('90vh');
+  const numOfHorse = useRef(4);
 
-  useLayoutEffect(() => {
+  const startGame = () => {
+    setTimeout(() => {
+      setStart(true);
+    }, 3000);
+  };
+
+  const flipStartStatus = () => {
+    if (start) {
+      randomTime.sort((a, b) => {
+        return a - b;
+      });
+      setTimeout(() => {
+        setStart(false);
+      }, randomTime[numOfHorse.current - 1] * 1000);
+    }
+  };
+
+  // Make random time array
+  useEffect(() => {
     let randomArray = [];
     let x = 0;
     while (x < 10) {
@@ -15,18 +34,15 @@ const RaceGameDisplay = () => {
       randomArray.push(randomNum);
       x++;
     }
-
-    const arrToSet = new Set(randomArray);
+    const arrToSet = new Set(randomArray); // make sure no duplicated numbers in the array
     const uniqueArray = [...arrToSet];
+    if (uniqueArray.length <= 3) {
+      uniqueArray.push(8, 9);
+    }
     setRandomTime(uniqueArray);
-    console.log('random array', randomArray);
-    console.log('final array', uniqueArray);
-    console.log('This is randomTime', randomTime);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  setTimeout(() => {
-    setStart(true);
-  }, 5000);
+    flipStartStatus();
+    console.log('randomTime', randomTime);
+  }, [start]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
@@ -62,7 +78,9 @@ const RaceGameDisplay = () => {
           </motion.div>
         </div>
       ) : (
-        <p>Not yet</p>
+        <button className='finishLine-btn' onClick={startGame}>
+          Start the Race
+        </button>
       )}
 
       <div className='finishLine'>Finish Line</div>
