@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# Horse Racing Project
+
+## :beginner: About
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I used framer-motion to mimic the race. Each horse is assigned with a random duration to finish the movement.
+
+How to play:
+
+1. At http://localhost:3000, place the bet and press confirm button. This will lead to the game page.
+2. At http://localhost:3000/race, press the 'start the race' button to play the game.
+
+## Project status
+
+This project is still ongoing.
+
+## To be done
+
+- Make api call to convert the exchange rate
+- User betting history
+- Add a header to allow users to go to different pages
+- A result page to show if users win or lose the game
 
 ## Available Scripts
 
@@ -13,6 +32,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `npm run server`
+
+Run the express server to fetch exchange rate API
+API: [exchangeratesapi.io](https://exchangeratesapi.io/)
 
 ### `npm test`
 
