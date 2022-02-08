@@ -36,7 +36,7 @@ You may also see any lint errors in the console.
 ### `npm run server`
 
 Run the express server to fetch exchange rate API
-API: [exchangeratesapi.io](https://exchangeratesapi.io/)
+[exchangeratesapi.io](https://exchangeratesapi.io/)
 
 ### `npm test`
 
